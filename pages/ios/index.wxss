@@ -1,0 +1,125 @@
+/**index.wxss**/
+.container{
+  padding: 0 20rpx;
+}
+.navTop{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ccc;
+}
+.uleft{
+  width: 140rpx;
+  height: 60rpx;
+  background: #FFB800;
+  float: left;
+  margin-top: 10rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+}
+.uright{
+  width: 30%;
+  float: right;
+  text-align: right;
+}
+.uright text:last-child{
+  color: red;
+}
+.bodyfz{
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.fzleft{
+  width: 49%;
+  float: left;
+  border-right:2px solid #ccc; 
+}
+.checkbox{
+  width: 33%;
+  float: left;
+  padding: 10rpx 0;
+}
+.fzright{
+  width: 49%;
+  float: left;
+}
+.top{
+  height: 60rpx;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20rpx;
+}
+.hbuttom{
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10rpx;
+}
+.hbuttom .radio{
+  float: left;
+  width: 30%;
+  padding-bottom: 20rpx;
+}
+.myimg{
+  height: 300rpx;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  background: url("data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMraHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjRFMDEwOTJDOUEwQTExRTg5NzZCRkJBRkIyMTdGRjMxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjRFMDEwOTJEOUEwQTExRTg5NzZCRkJBRkIyMTdGRjMxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NEUwMTA5MkE5QTBBMTFFODk3NkJGQkFGQjIxN0ZGMzEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NEUwMTA5MkI5QTBBMTFFODk3NkJGQkFGQjIxN0ZGMzEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAGBAQEBQQGBQUGCQYFBgkLCAYGCAsMCgoLCgoMEAwMDAwMDBAMDg8QDw4MExMUFBMTHBsbGxwfHx8fHx8fHx8fAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAAgACADAREAAhEBAxEB/8QAWwABAQEBAAAAAAAAAAAAAAAABAAGCAEBAAAAAAAAAAAAAAAAAAAAABAAAgIBBAIDAQAAAAAAAAAAAQIDBAUAERIHMQYhMhNBEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDpm/fsiwtCgqPedRI7ybmOCMkqJJApBbkQeCAjlsfkAEgD2MPiYK81zMWWsxQo0tqe7NtXVEBZnaLdK6Kqj7cPHk6Cr4fFT14bmHstWimRZas9KblXZHAZXWLd67qyn7cPHg6BFC/YNlqF9VS6ifokkYIjnjBAMkYJJXiSA6bnjuPkgg6A+HsV4MTZzF2ZIYrLTXZ7UrBEWuu/5M7MQqqldE5Hx5OgxfZXZfXFvrn2qpU9rw9i1Yw9+KCCK/VeSSR6siqiKshLMxOwA0F1r2X1xU659VqW/a8PXtV8PQinglv1UkjkSrGrI6tICrKRsQdBtMxYrz4qtmacyTRVnhuwWomDo1dtv1ZGUlXV67vx/ng6Cw9evNirOGuRJNFWaWlPVlUOjV23/JXVgVZXrunL+eRoMX2V1r1zU659qtVfVcPXtV8PflgnioVUkjkSrIyujLGCrKRuCNBda9a9c2+ufVbVr1XD2LVjD0JZ55aFV5JJHqxszuzRkszE7knQbTMV68OKrYenCkMVl4aUFWJQiLXXb9VRVAVFSuj8f54GgRfoWTYW/QZUvIojdJNxHPGCWEchUErxJPBwDx3PwQSCB7GYxU9eanmKz1opkaK1Bdh5V2RwVZGl2eu6sp+vPx5Ggq+XxUNeKnh6zWIoUWKrBSh411RAFVFl2Suiqo+vPx4GgTRoWBZa/fZXuun5okZJjgjJBMcZIBbkQC77DlsPgAAAP//Z") no-repeat center center;
+}
+.imgchoose{
+  height: 180rpx;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10rpx;
+}
+.imgchoose .imgbox{
+  width: 20%;
+  margin: 1.5% 2.5%;
+  height: 90%;
+  float: left;
+}
+.imgchoose .imgbox image{
+  width: 100%;
+  height: 100%;
+}
+.left{
+  width: 25%;
+  float: left;
+  text-align: right;
+}
+.right{
+  width: 65%;
+  float: left;
+  margin-left: 5%;
+}
+.right input{
+  height: 100rpx;
+  border: 1px solid #eee;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+}
+.right textarea{
+  border: 1px solid #eee;
+  padding-left: 20rpx;
+  border-radius: 10rpx;
+  max-width: 100%;
+}
+.right picker{
+  border: 1px solid #eee;
+  height: 100rpx;
+  padding-left: 20rpx;
+}
+.right .radio{
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  float: left;
+}
+.row{
+  overflow: hidden;
+  line-height: 100rpx;
+  margin-top: 20rpx;
+}
+.row:last-child{
+  padding-bottom: 50rpx;
+}

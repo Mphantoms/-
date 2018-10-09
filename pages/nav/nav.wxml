@@ -1,0 +1,11 @@
+<view class='container myc'>
+  <view class='toIndex'>
+     <view class='innerT sl' bindtap='toIndex'><text>采集人脸</text></view>
+  </view>
+  <view class='toChangepwd'>
+    <view class='innerT gl' bindtap='toChangepwd'><text>修改密码</text></view>
+  </view>
+   <view class='toCancel'>
+    <view class='innerT bl' bindtap='toCancel'><text>注销</text></view>
+  </view>
+</view>

@@ -1,0 +1,130 @@
+<!--index.wxml-->
+<canvas canvas-id="photo_canvas" style="width:{{canvasWidth}}px;height:{{canvasHeight}}px;position:absolute;top: -3000px;left: -3000px;"></canvas>
+<scroll-view style="height: 100%;" scroll-with-animation='true' scroll-y scroll-top="{{scrollTops}}" bindscroll="scrollTopEvent">
+  <view class='container'>
+    <view class='navTop'>
+      <view class='uleft' bindtap='clearData'>重置</view>
+      <view class='uright'><text>{{username}}</text></view>
+    </view>
+    <view class='header'>
+      <view class='top'>
+        <text>*类型</text>
+      </view>
+      <view class='hbuttom'>
+        <checkbox-group bindchange="radioChange">
+          <label class="checkbox" wx:key="{{index}}" wx:for="{{items}}">
+            <checkbox disabled="{{item.auth==1?false:true}}" value="{{item.id}}" checked="{{item.checked}}"/><text style="{{item.auth==1?'color:#000':'color:#999'}}" >{{item.name}}</text>
+          </label>
+        </checkbox-group>
+      </view>
+    </view>
+    <view class='body'>
+      <view class='top'>
+        <text>人像采集</text>
+      </view>
+      <view class='myimg' bindtap="clickToCamare">
+        <image style="height: {{imgheight}}px; width:{{imgwidth}}px;" src="{{src}}"></image>
+      </view>
+      <view class='imgchoose'>
+        <view class='imgbox' wx:key="{{index}}" wx:for="{{imgarr}}">
+          <image style="{{index == clickid?'border:2px solid red':'border:none'}}" bindtap='clickToChangerColor'  mode='scaleToFill' src='{{item}}' data-id='{{index}}'></image>
+        </view>
+      </view>
+    </view>
+    <view class='bodyfz'>
+      <view class='top'>
+        <text>侧面采集</text>
+      </view>
+      <view class='fzleft'>
+        <view class='myimg' bindtap="clickToCamare3">
+          <image style="height: {{imgheight3}}px; width:{{imgwidth3}}px;" src="{{src3}}"></image>
+        </view>
+      </view>
+      <view class='fzright'>
+        <view class='myimg' bindtap="clickToCamare4">
+          <image style="height: {{imgheight4}}px; width:{{imgwidth4}}px;" src="{{src4}}"></image>
+        </view>
+      </view>
+      
+    </view>
+    <view class='body2'>
+      <view class='top'>
+        <text>身份证信息采集</text>
+      </view>
+      <view class='myimg' bindtap="clickToCamare2">
+      <image style="height: {{imgheight2}}px; width:{{imgwidth2}}px;" src="{{src2}}"></image>
+      </view>
+    </view>
+    <view class='footer'>
+      <view class="row">
+        <view class='left'>
+          <text>*姓名</text>
+        </view>
+        <view class='right'>
+          <input bindinput='nameChange'  maxlength="10" placeholder="请输入姓名" value='{{id_name}}' />
+        </view>
+      </view>
+      <view class="row">
+        <view class='left'>
+          <text>*性别</text>
+        </view>
+        <view class='right'>
+          <radio-group class="radio-group" bindchange="radioChange1">
+            <label class="radio" wx:key="{{index}}" wx:for="{{radioArr1}}">
+              <radio value="{{item.value}}" checked='{{item.check}}'/>{{item.name}}
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class="row">
+        <view class='left'>
+          <text>*出生日期</text>
+        </view>
+        <view class='right'>
+          <picker mode="date" value="{{date}}" start="1850-01-01" end="2099-12-30" bindchange="bindDateChange">
+            {{date}}
+          </picker>
+        </view>
+      </view>
+      <view class="row">
+        <view class='left'>
+          <text>*证件号</text>
+        </view>
+        <view class='right'>
+          <input bindinput='numChange' maxlength="18" placeholder="请输入身份证号码" value='{{id_number}}' />
+        </view>
+      </view>
+      <view class="row">
+        <view class='left'>
+          <text>户籍地址</text>
+        </view>
+        <view class='right'>
+          <input bindinput='adressChange' placeholder="请输入户籍地址" value='{{address}}' />
+        </view>
+      </view>
+      <view class="row">
+        <view class='left'>
+          <text>标签</text>
+        </view>
+        <view class='right'>
+          <radio-group class="radio-group" bindchange="radioChange2">
+            <label class="radio" wx:key="{{index}}" wx:for="{{radioArr2}}">
+              <radio value="{{item.name}}" />{{item.name}}
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class="row">
+        <view class='left'>
+          <text>备注</text>
+        </view>
+        <view class='right'>
+        <textarea bindinput="remarkChange" value='{{remark}}' />
+        </view>
+      </view>
+      <view class='row'>
+        <button type="primary" bindtap="clickToSer" hover-class="other-button-hover">点我提交</button>
+      </view>
+    </view>
+  </view>
+</scroll-view>

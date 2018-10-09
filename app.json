@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/nav/nav",
+    "pages/android/index",
+    "pages/ios/index",
+    "pages/changepwd/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "人脸采集系统",
+    "navigationBarTextStyle":"black"
+  }
+}
